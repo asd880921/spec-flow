@@ -22,22 +22,28 @@ Spec 驅動的開發管線，一組會互相銜接的 skill：從需求一路走
 - Claude Code：skill 顯示為 `spec-flow:<skill>`。
 - Codex：skill 屬於 plugin `spec-flow`。
 
-## 安裝
+## 安裝（從 GitHub 託管）
 
-**Claude Code**（在互動式終端）
+本套件以一個 git repo 託管，repo 根目錄即 marketplace 根目錄。
+
+**Claude Code**（在互動式終端，可直接吃 GitHub）
 ```
-/plugin marketplace add <此 marketplace 根目錄路徑>
+/plugin marketplace add <your-github>/spec-flow
 /plugin install spec-flow
 ```
 
-**Codex**（編輯 `~/.codex/config.toml`）
+**Codex**：先把 repo clone 到一個穩定路徑，再以本機 marketplace 註冊（編輯 `~/.codex/config.toml`）
+```bash
+git clone https://github.com/<your-github>/spec-flow.git ~/spec-flow
+```
 ```toml
 [marketplaces.spec-flow]
 source_type = "local"
-source = "<此 marketplace 根目錄路徑>"
+source = "C:\\Users\\<you>\\spec-flow"
 
 [plugins."spec-flow@spec-flow"]
 enabled = true
 ```
+> 更新時：`git -C ~/spec-flow pull`。
 
 > 安裝並驗證後，移除原本散落在 `~/.codex/skills/` 與 Claude skills 目錄中的這 6 個獨立 skill 資料夾，避免與 plugin 版本重複。
