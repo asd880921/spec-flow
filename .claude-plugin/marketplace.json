@@ -1,0 +1,13 @@
+{
+  "name": "spec-flow",
+  "owner": {
+    "name": "Tony Lu"
+  },
+  "plugins": [
+    {
+      "name": "spec-flow",
+      "source": "./plugins/spec-flow",
+      "description": "Spec 驅動的開發管線：SA → SD → 規劃 commit → 實作 → 驗收 → 交付（支援單一與多模組流程）。"
+    }
+  ]
+}

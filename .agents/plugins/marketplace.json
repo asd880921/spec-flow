@@ -1,0 +1,16 @@
+{
+  "name": "spec-flow",
+  "plugins": [
+    {
+      "name": "spec-flow",
+      "source": {
+        "source": "local",
+        "path": "./plugins/spec-flow"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
