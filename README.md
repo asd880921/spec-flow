@@ -1,5 +1,7 @@
 # spec-flow
 
+安裝教程：[連結](./INSTALL.md)
+
 Spec 驅動的開發管線 —— 一組會互相銜接的 skill，從需求一路走到交付。可同時安裝到 **Claude Code** 與 **Codex**，兩邊都顯示為同一組 `spec-flow`。
 
 本 repo 是一個 plugin marketplace，repo 根目錄即 marketplace 根目錄，plugin 本體在 `plugins/spec-flow/`。
@@ -70,57 +72,3 @@ flowchart TD
 
 ---
 
-## 安裝
-
-### Claude Code 安裝/更新/移除 指令說明
-安裝指令 (於終端開啟 Claude Cli 後，依序輸入以下指令)：
-```
-/plugin marketplace add asd880921/spec-flow
-```
-```
-/plugin install spec-flow
-```
-```
-/reload-plugins
-```
-
-更新指令：
-```
-/plugin marketplace update spec-flow
-```
-```
-/reload-plugins
-```
-
-移除指令：
-```
-/plugin uninstall spec-flow
-```
-```
-/plugin marketplace remove spec-flow
-```
-
-### Codex 安裝/更新/移除 指令說明
-安裝指令 (開啟 Command 終端後直接輸入)：
-```powershell
-codex plugin marketplace add asd880921/spec-flow
-```
-```powershell
-codex plugin add spec-flow@spec-flow
-```
-更新指令：
-
-```powershell
-codex plugin marketplace upgrade spec-flow
-```
-```powershell
-codex plugin add spec-flow@spec-flow
-```
-
-移除指令：
-```powershell
-codex plugin remove spec-flow@spec-flow
-```
-```powershell
-codex plugin marketplace remove spec-flow
-```
