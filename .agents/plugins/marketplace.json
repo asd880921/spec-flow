@@ -1,5 +1,8 @@
-{
+﻿{
   "name": "spec-flow",
+  "interface": {
+    "displayName": "Spec Flow"
+  },
   "plugins": [
     {
       "name": "spec-flow",
@@ -8,7 +11,8 @@
         "path": "./plugins/spec-flow"
       },
       "policy": {
-        "installation": "AVAILABLE"
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
       },
       "category": "Developer Tools"
     }

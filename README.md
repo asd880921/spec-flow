@@ -72,25 +72,55 @@ flowchart TD
 
 ## 安裝
 
-**Claude Code**（互動式終端，可直接吃 GitHub）
+### Claude Code 安裝/更新/移除 指令說明
+安裝指令 (於終端開啟 Claude Cli 後，依序輸入以下指令)：
 ```
 /plugin marketplace add asd880921/spec-flow
+```
+```
 /plugin install spec-flow
 ```
-
-**Codex**（先 clone 到穩定路徑，再以本機 marketplace 註冊）
-```bash
-git clone https://github.com/asd880921/spec-flow.git ~/spec-flow
 ```
-編輯 `~/.codex/config.toml`：
-```toml
-[marketplaces.spec-flow]
-source_type = "local"
-source = "C:\\Users\\<you>\\spec-flow"
-
-[plugins."spec-flow@spec-flow"]
-enabled = true
+/reload-plugins
 ```
-更新時：`git -C ~/spec-flow pull`。
 
-> 安裝並驗證後，移除原本散落在 `~/.codex/skills/` 與 Claude skills 目錄中的這 6 個獨立 skill 資料夾，避免與 plugin 版本重複。
+更新指令：
+```
+/plugin marketplace update spec-flow
+```
+```
+/reload-plugins
+```
+
+移除指令：
+```
+/plugin uninstall spec-flow
+```
+```
+/plugin marketplace remove spec-flow
+```
+
+### Codex 安裝/更新/移除 指令說明
+安裝指令 (開啟 Command 終端後直接輸入)：
+```powershell
+codex plugin marketplace add asd880921/spec-flow
+```
+```powershell
+codex plugin add spec-flow@spec-flow
+```
+更新指令：
+
+```powershell
+codex plugin marketplace upgrade spec-flow
+```
+```powershell
+codex plugin add spec-flow@spec-flow
+```
+
+移除指令：
+```powershell
+codex plugin remove spec-flow@spec-flow
+```
+```powershell
+codex plugin marketplace remove spec-flow
+```
