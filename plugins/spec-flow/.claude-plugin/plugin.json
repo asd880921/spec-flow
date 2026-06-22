@@ -1,6 +1,6 @@
 {
   "name": "spec-flow",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Spec 驅動的開發管線：從 PRD 產出 SA、補上 SD、規劃 atomic commits、逐 commit 人工協作實作、驗收，最後清洗交付。支援單一文件與多模組（1 母 N 子）兩種流程。",
   "author": {
     "name": "Tony Lu"
