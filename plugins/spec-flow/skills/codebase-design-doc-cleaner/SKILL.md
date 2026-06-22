@@ -1,17 +1,17 @@
 ---
 name: codebase-design-doc-cleaner
-description: 清洗由 codebase-sa-builder 或 codebase-sa-sd-finalizer 產出的設計文件（架構層級 SA 文件、SA + SD 混合文件 `*-sd.md`，或拆分情境的母文件／拆分總覽 SA），移除來源標記說明、來源標記與「待釐清事項」等內部工作註記，產出乾淨、適合對外交付的版本，且不改寫需求、不重新設計技術內容。一次清一份、由使用者個別調用；拆分情境（1 母 N 子）下對母文件與各子文件逐一執行。當使用者要清洗、定稿、交件或準備釋出這類設計文件時使用。
+description: 清洗由 codebase-sa-builder、codebase-sa-sd-finalizer 或 codebase-dev-doc-builder 產出的設計文件（架構層級 SA 文件、SA + SD 混合文件 `*-sd.md`、拆分情境的母文件／拆分總覽 SA，或輕量開發文件 `*-dev.md`），移除來源標記說明、來源標記與「待釐清事項」等內部工作註記，產出乾淨、適合對外交付的版本，且不改寫需求、不重新設計技術內容。一次清一份、由使用者個別調用；拆分情境（1 母 N 子）下對母文件與各子文件逐一執行。當使用者要清洗、定稿、交件或準備釋出這類設計文件時使用。
 ---
 
 # codebase-design-doc-cleaner
 
-當使用者要求清洗、定稿、交件或準備釋出由 `codebase-sa-builder`（架構層級 SA 文件）或 `codebase-sa-sd-finalizer`（SA + SD 混合文件 `*-sd.md`）產出的設計文件時，使用此 skill。
+當使用者要求清洗、定稿、交件或準備釋出由 `codebase-sa-builder`（架構層級 SA 文件）、`codebase-sa-sd-finalizer`（SA + SD 混合文件 `*-sd.md`）或 `codebase-dev-doc-builder`（輕量開發文件 `*-dev.md`）產出的設計文件時，使用此 skill。
 
 本 skill 只移除分析過程中有用、但對讀者造成干擾的內部工作註記。**直接編輯該 Markdown 文件本身**。除非使用者明確要求自動化，否則不要建立或執行清洗腳本。不得改寫需求、不得重新設計技術內容、不得補上缺漏的分析，也不得修改任何其他 skill。
 
 ## 操作對象與安全邊界
 
-- 清洗對象是**交付用的設計文件**：`codebase-sa-sd-finalizer` 產出的 `*-sd.md` 混合文件、`codebase-sa-builder` 產出的 SA 文件，或拆分情境下的**母文件（拆分總覽 SA）**。
+- 清洗對象是**交付用的設計文件**：`codebase-sa-sd-finalizer` 產出的 `*-sd.md` 混合文件、`codebase-sa-builder` 產出的 SA 文件、拆分情境下的**母文件（拆分總覽 SA）**，或 `codebase-dev-doc-builder` 產出的輕量開發文件 `*-dev.md`。
 - **一次清一份，由使用者個別調用。** 拆分情境（1 母 N 子）下，使用者會對母文件與每份子文件逐一執行本 skill；本 skill 不主動批次處理整組文件，只清使用者本次指定的那一份。
 - **不要**動到 `codebase-sa-sd-finalizer` 流程中保持原狀的原始 SA 文件（即未加 `-sd` 的原檔）。清洗只針對使用者指定要交付的那一份。
 - 若使用者希望保留清洗前的版本，先確認，再依其指示另存乾淨版或就地編輯。
