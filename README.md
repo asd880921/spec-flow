@@ -1,6 +1,6 @@
 # spec-flow
 
-套件版本：`v0.2.2`  
+套件版本：`v0.3.0`  
 更新時間：2026-06-25
 <!-- 版本對齊 plugins/spec-flow/.claude-plugin/plugin.json，發版時一併更新此處版本與日期 -->
 
