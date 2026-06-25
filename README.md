@@ -2,13 +2,12 @@
 
 套件版本：`v0.3.0`  
 更新時間：2026-06-25
+安裝教程：[INSTALL.md](./INSTALL.md)
 <!-- 版本對齊 plugins/spec-flow/.claude-plugin/plugin.json，發版時一併更新此處版本與日期 -->
 
 ---
 
-安裝教程：[INSTALL.md](./INSTALL.md)
-
-Spec 驅動的 Workflow —— 一組會互相銜接的 skill，從需求一路走到交付。可同時安裝到 **Claude Code** 與 **Codex**，兩邊都顯示為同一組 `spec-flow`。
+Spec 驅動的 Workflow —— 一組會互相銜接的 skill，從需求一路走到交付。支援 **Claude Code** 與 **Codex**。
 
 本 repo 是一個 plugin marketplace，repo 根目錄即 marketplace 根目錄，plugin 本體在 `plugins/spec-flow/`。
 
