@@ -38,7 +38,7 @@
 | 標記 | 意義 |
 | --- | --- |
 | PRD-confirmed | 來自 PRD（文件、網址、Issue、需求討論或使用者補充）。 |
-| Code-confirmed | 來自既有專案程式碼（多經 GitNexus 查找確認）。 |
+| Code-confirmed | 來自既有專案程式碼（多經程式碼查找確認）。 |
 | SA-confirmed | 來自本文件 SA 層級已確認的架構陳述。 |
 | Doc-supplement | 來自 PRD 以外的補充文件或討論。 |
 | Inferred | 依現有資料合理推導，尚未明確確認。 |

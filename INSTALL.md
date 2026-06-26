@@ -1,11 +1,10 @@
 ﻿## 安裝教程
 
-### 前置需求：GitNexus
+### 前置需求：程式碼知識圖譜查找能力
 
-spec-flow 在分析既有專案時，SA / SD 階段會透過 GitNexus 查找程式碼現況，因此需先安裝並設定 GitNexus。
+spec-flow 在分析既有專案時，SA / SD 階段會透過「程式碼知識圖譜查找」能力查找程式碼現況。**工作流本身不綁定特定產品**——你可以使用任何能在既有 codebase 中查找模組、流程、資料流與既有實作的工具（一般以 MCP server 形式提供）。
 
-- 原倉庫：[abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) —— 安裝與配置以官方說明為準。
-- 中文教學（他人整理）：[GitNexus 安裝與配置 — aivi.fyi](https://www.aivi.fyi/llms/gitnexus#%E4%B8%89%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE)，可作輔助參考。
+設定時只需在 Claude Code / Codex 環境中接上一個提供此能力的工具/MCP server 即可；之後 skill 會自動透過該能力查找現況，skill 文件不需改動。若該能力不可用或查無結果，skill 會自動退用一般的程式碼搜尋與檔案閱讀。
 
 ### Claude Code 安裝/更新/移除 指令說明
 安裝指令 (於終端開啟 Claude Cli 後，依序輸入以下指令)：
