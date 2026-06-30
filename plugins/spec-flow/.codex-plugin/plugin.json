@@ -1,7 +1,7 @@
 {
   "name": "spec-flow",
-  "version": "0.3.1",
-  "description": "spec 驅動的開發工作流：從 PRD 產出 SA、補上 SD、規劃 atomic commits、逐 commit 人工協作實作、驗收，最後清洗交付。支援單一文件與多模組（1 母 N 子）兩種流程。",
+  "version": "0.3.2",
+  "description": "spec 驅動的開發工作流：從 PRD 產出 SA、補上 SD、規劃 atomic commits、逐 commit 人工協作實作、驗收。支援單一文件與多模組（1 母 N 子）兩種流程。",
   "author": {
     "name": "Tony Lu"
   },
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Spec Flow",
     "shortDescription": "spec 驅動的開發工作流",
-    "longDescription": "一組協作 skill，從需求(PRD)產出架構分析(SA)、補上系統設計(SD)、規劃 atomic commit、逐 commit 人工協作實作、驗收條件驗證，最後清洗成交付文件。入口先依規模分流：小改動走輕量開發文件(-dev.md)直接進入開發，其餘走完整 SA/SD；完整流程再支援單一文件與多模組(1 母 N 子)兩種拆法，並具備跨 skill 的下一步引導與往上修正路由。",
+    "longDescription": "一組協作 skill，從需求(PRD)產出架構分析(SA)、補上系統設計(SD)、規劃 atomic commit、逐 commit 人工協作實作、驗收條件驗證。入口先依規模分流：小改動走輕量開發文件(-dev.md)直接進入開發，其餘走完整 SA/SD；完整流程再支援單一文件與多模組(1 母 N 子)兩種拆法，並具備跨 skill 的下一步引導與往上修正路由。",
     "developerName": "Tony Lu",
     "category": "Developer Tools",
     "defaultPrompt": [
